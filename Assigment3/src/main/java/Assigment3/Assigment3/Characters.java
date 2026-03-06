@@ -37,9 +37,6 @@ public class Characters {
     @Temporal(TemporalType.DATE)        
     private Date activeDate;
 
-    public Characters() {
-    }
-
     public Characters(String name, String role, double age, String universe, String species, Date activeDate) {
         this.name = name;
         this.role = role;
