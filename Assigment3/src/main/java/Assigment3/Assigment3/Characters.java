@@ -1,7 +1,6 @@
 package Assigment3.Assigment3;
 
 import java.util.Date;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,92 +13,94 @@ import jakarta.persistence.TemporalType;
 @Entity
 @Table(name = "characters")
 public class Characters {
-    @Id 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    @Column(name = "name", nullable = false)
-    private String name;
+	@Column(name = "name", nullable = false)
+	private String name;
 
-    @Column(name = "role", nullable = false)
-    private String role;
+	@Column(name = "role", nullable = false)
+	private String role;
 
-    @Column(name = "age", nullable = false)
-    private double age;
+	@Column(name = "age", nullable = false)
+	private double age;
 
-    @Column(name = "universe", nullable = false)
-    private String universe;
+	@Column(name = "universe", nullable = false)
+	private String universe;
 
-    @Column(name = "species", nullable = false)
-    private String species;
+	@Column(name = "species", nullable = false)
+	private String species;
 
-    @Column(name = "activeDate", nullable = false)
-    @Temporal(TemporalType.DATE)        
-    private Date activeDate;
+	@Column(name = "activeDate", nullable = false)
+	@Temporal(TemporalType.DATE)
+	private Date activeDate;
 
-    public Characters(String name, String role, double age, String universe, String species, Date activeDate) {
-        this.name = name;
-        this.role = role;
-        this.age = age;
-        this.universe = universe;
-        this.species = species;
-        this.activeDate = activeDate;
-    }
+	public Characters() {
+	}
 
-    // Getters and Setters
-    public Long getId() {
-        return id;
-    }
+	public Characters(String name, String role, double age, String universe, String species, Date activeDate) {
+		this.name = name;
+		this.role = role;
+		this.age = age;
+		this.universe = universe;
+		this.species = species;
+		this.activeDate = activeDate;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getRole() {
-        return role;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setRole(String role) {
-        this.role = role;
-    }
+	public String getRole() {
+		return role;
+	}
 
-    public double getAge() {
-        return age;
-    }
+	public void setRole(String role) {
+		this.role = role;
+	}
 
-    public void setAge(double age) {
-        this.age = age;
-    }
+	public double getAge() {
+		return age;
+	}
 
-    public String getUniverse() {
-        return universe;
-    }
+	public void setAge(double age) {
+		this.age = age;
+	}
 
-    public void setUniverse(String universe) {
-        this.universe = universe;
-    }
+	public String getUniverse() {
+		return universe;
+	}
 
-    public String getSpecies() {
-        return species;
-    }
+	public void setUniverse(String universe) {
+		this.universe = universe;
+	}
 
-    public void setSpecies(String species) {
-        this.species = species;
-    }
+	public String getSpecies() {
+		return species;
+	}
 
-    public Date getActiveDate() {
-        return activeDate;
-    }
+	public void setSpecies(String species) {
+		this.species = species;
+	}
 
-    public void setActiveDate(Date activeDate) {
-        this.activeDate = activeDate;
-    }
+	public Date getActiveDate() {
+		return activeDate;
+	}
+
+	public void setActiveDate(Date activeDate) {
+		this.activeDate = activeDate;
+	}
 }
